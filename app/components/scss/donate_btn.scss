@@ -1,0 +1,21 @@
+.donate-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 275px;
+  
+    .donate {
+      cursor: pointer;
+      transition: all 400ms ease-in-out;
+  
+      &:hover {
+        transform: rotateX(360deg);
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .donate-wrapper {
+      margin-top: 170px;
+    }
+  }

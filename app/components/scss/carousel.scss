@@ -1,0 +1,64 @@
+.carousel-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: -5px auto;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+  }
+
+  .carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform-style: preserve-3d;
+    z-index: 1;
+
+    &.swiper-slide-active {
+      opacity: 1 !important;
+      transform: scale(1.35);
+      z-index: 2;
+    }
+
+    .carousel-image {
+      border-radius: 12px;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #000;
+    font-weight: bold;
+    scale: 1.4;
+    transition: opacity 0.2s;
+    z-index: 100;
+
+    &::after {
+      font-size: 20px;
+    }
+  }
+}
+
+.card-swiper {
+  width: 420px;
+  height: 580px;
+
+  .swiper-slide {
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    margin-top: 90px;
+  }
+}

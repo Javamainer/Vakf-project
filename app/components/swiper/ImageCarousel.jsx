@@ -5,7 +5,7 @@ import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './css/carousel.css'; 
+import '../scss/carousel.scss'; 
 
 const images = [
   "/carousel/img1.jpeg",

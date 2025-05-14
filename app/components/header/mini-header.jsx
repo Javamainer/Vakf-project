@@ -1,10 +1,10 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import './css/header.css';
+import '../scss/header.scss';
 import Link from 'next/link';
 
-export default function Header() {
+export default function MiniHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -23,12 +23,36 @@ export default function Header() {
   return (
     <header>
       <Link href='/'><Image className='logo' src='/dumark_logo.svg' width={210} height={110} alt='logo' /></Link>
+
       <input
         className='search_bar'
         type='text'
         placeholder='Search...'
-        maxLength={30}
+        maxLength={30}  
       />
+
+      <div className='switch-container'>
+        <button className='switch-button'>
+          <Image className='switch' src='/switch_on.svg' width={80} height={80} alt='settings' />
+        </button>
+      </div>
+      
+      <div className='dropdown-container' ref={menuRef}>
+        <button className='dropdown-button' onClick={() => setMenuOpen(!menuOpen)}>
+          <Image className='dropdown' src='/language.svg' width={50} height={50} alt='language' />
+        </button>
+
+        {menuOpen && (
+          <div className='dropdown-menu'>
+            <button>🌐 Мова</button>
+            <button>🌐 Мова</button>
+            <button>🌐 Мова</button>
+          </div>
+        )}
+      </div>
+
+      
+
       <ul>
         <li><Link href='/about_us'>О нас</Link></li>
         <li><Link href='/about_vakf'>О Вакфах</Link></li>
@@ -36,19 +60,6 @@ export default function Header() {
         <li><Link href='/partners'>Партенри</Link></li>
         <li><Link href='/implemented'>Реалізовано</Link></li>
       </ul>
-
-      <div className='settings-container' ref={menuRef}>
-        <button className='gear-button' onClick={() => setMenuOpen(!menuOpen)}>
-          <Image className='settings' src='/gear.svg' width={50} height={50} alt='settings' />
-        </button>
-
-        {menuOpen && (
-          <div className='dropdown-menu'>
-            <button>🌐 Мова</button>
-            <button>🌙 Тема</button>
-          </div>
-        )}
-      </div>
     </header>
   );
 }

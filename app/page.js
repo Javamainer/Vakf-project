@@ -1,13 +1,13 @@
-import Header from "./components/header";
-import ImageCarousel from "./components/ImageCarousel";
-import Image from "next/image";
+import { ResponsiveHeader } from './components/header';
+import { ResponsiveSwiper } from './components/swiper';
+import Donate from "./components/Donate.jsx";
 
 export default function Home() {
   return (
     <div>
-      <Header />
-      <ImageCarousel />
-      <div className="donate-wrapper"><Image className="donate" src="/donate.svg" width={300} height={150} alt="donate" /></div>
+      <ResponsiveHeader />
+      <ResponsiveSwiper />
+      <Donate />
     </div>
   );
 }

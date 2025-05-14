@@ -1,9 +1,9 @@
-import Header from "../components/header";
+import { ResponsiveHeader } from '../components/header';
 
 export default function about_us() {
   return (
     <div>
-      <Header />
+      <ResponsiveHeader />
       test  about_us
     </div>
   );

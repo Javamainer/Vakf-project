@@ -1,9 +1,9 @@
-import Header from "../components/header";
+import { ResponsiveHeader } from '../components/header';
 
 export default function partners() {
   return (
     <div>
-      <Header />
+      <ResponsiveHeader />
       test
     </div>
   );

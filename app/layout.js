@@ -1,5 +1,5 @@
 import { Comfortaa } from "next/font/google";
-import "./globals.css";
+import './components/scss/globals.scss';
 
 const comf = Comfortaa({
   variable: "--font-comfortaa",

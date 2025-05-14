@@ -1,9 +1,9 @@
-import Header from "../components/header";
+import { ResponsiveHeader } from '../components/header';
 
 export default function contact() {
   return (
     <div>
-      <Header />
+      <ResponsiveHeader />
       LOrem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.LOrem
       ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.  
     </div>
