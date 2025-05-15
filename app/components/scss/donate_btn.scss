@@ -16,6 +16,13 @@
 
   @media (max-width: 1024px) {
     .donate-wrapper {
-      margin-top: 170px;
+      height: 270px;
+    }
+  }
+
+  @media (width: 1024px) {
+    .donate-wrapper {
+      height: 275px;
+      margin-top: 30px;
     }
   }

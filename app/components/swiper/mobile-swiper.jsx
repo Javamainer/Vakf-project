@@ -1,23 +1,33 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/effect-cards';
-import '../scss/carousel.scss'; 
+import '../scss/carousel.scss';
 
-export default function ModileSwiper() {
+export default function MobileCarousel() {
   return (
-    <Swiper
-      effect="cards"
-      grabCursor={true}
-      modules={[EffectCards]}
-      className="card-swiper"
-    >
-      <SwiperSlide>Карточка 1</SwiperSlide>
-      <SwiperSlide>Карточка 2</SwiperSlide>
-      <SwiperSlide>Карточка 3</SwiperSlide>
-      <SwiperSlide>Карточка 4</SwiperSlide>
-    </Swiper>
+    <div className="mobile-carousel-wrapper">
+      <Swiper
+        className="card-swiper"
+        spaceBetween={20}
+        slidesPerView={1}
+        breakpoints={{
+          1024: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 1,
+          },
+        }}
+      >
+        <SwiperSlide>Карточка 1</SwiperSlide>
+        <SwiperSlide>Карточка 2</SwiperSlide>
+        <SwiperSlide>Карточка 3</SwiperSlide>
+        <SwiperSlide>Карточка 4</SwiperSlide>
+      </Swiper>
+    </div>
   );
 }

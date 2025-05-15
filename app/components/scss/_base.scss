@@ -5,7 +5,7 @@
   }
   
   body {
-    background: linear-gradient(-45deg, #BBFFEB, #C3EAFF, #FFD6E8, #D6FFD6);
+    background: linear-gradient(-45deg, #BBFFEB, #C3EAFF, #80dcc7, #96b7f8);
     background-size: 400% 400%;
     animation: gradientShift 10s linear infinite;
     min-height: 100vh;
@@ -25,7 +25,7 @@
 
 @media (max-width: 1024px) {
   body {
-    animation: gradientShift 20s ease infinite; 
+    animation: gradientShift 15s ease infinite; 
   }
 }
 
